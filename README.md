@@ -1,10 +1,10 @@
 # LegacyVehicles
 Rust plugin. Adds Minicopter and Motorboat spawning back into the wild.
 
-**Overview**
+## Overview
 This plugin aims to implement mini and boat spawning into the latest version of Rust as closely as possible to pre-airwolf and fishing village updates.
 
-**Config**
+## Config
 BoatMinimumDistance
 _The minimum distance between boat spawns_
 
@@ -27,7 +27,7 @@ SpawnLoopInterval
 _The number of seconds between each spawn cycle._
 _During each spawn cycle, the plugin will attempt to spawn enough minis and boats to meet the MaxBoats and MaxMinis values._
 
-**Console Commands**
+## Console Commands
 lv.spawnminis
 _Manually trigger minicopter spawn cycle_
 
