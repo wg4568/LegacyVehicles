@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Threading;
 using ConVar;
 using Newtonsoft.Json;
 using Rust.Ai;
@@ -14,6 +15,7 @@ namespace Oxide.Plugins
     class LegacyVehicles : RustPlugin
     {
         private static readonly System.Random Random = new System.Random();
+        private static Timer spawnTimer;
 
         protected override void LoadDefaultConfig()
         {
@@ -27,13 +29,18 @@ namespace Oxide.Plugins
 
         private void Init()
         {
-            Timer spawnTimer = timer.Every((int) Config["SpawnLoopInterval"], () =>
+            spawnTimer = timer.Every((int) Config["SpawnLoopInterval"], () =>
             {
                 BoatSpawnCycle();
                 MiniSpawnCycle();
             });
 
             spawnTimer.Callback.Invoke();
+        }
+
+        private void Unload()
+        {
+            spawnTimer.Destroy();
         }
 
         private int GetMapSize()
