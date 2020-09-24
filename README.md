@@ -1,41 +1,39 @@
-# LegacyVehicles
-Rust plugin. Adds Minicopter and Motorboat spawning back into the wild.
+Adds Minicopter and Motorboat spawning back into the wild. This plugin aims to implement mini and boat spawning into the latest version of Rust as closely as possible to pre-airwolf and fishing village updates.
 
-## Overview
-This plugin aims to implement mini and boat spawning into the latest version of Rust as closely as possible to pre-airwolf and fishing village updates.
+## Configuration
 
-## Config
-BoatMinimumDistance<br/>
-_The minimum distance between boat spawns_
+* `BoatMinimumDistance`  
+The minimum distance between boat spawns.
 
-BoatToMapRatio<br/>
-_MapSize / BoatToMapRatio = Max Boats_<br/>
-_In other words, the lower this value, the more frequently boats will spawn_
+* `BoatToMapRatio`  
+MapSize / BoatToMapRatio = Max Boats  
+In other words, the lower this value, the more frequently boats will spawn.
 
-MaxSpawnAttempts<br/>
-_How many times will the plugin attempt to find a valid spawn location for an entity._<br/>
-_Decrease this if you encounter heavy lag during spawn cycles, but note it may result in fewer overall spawns._
+* `MaxSpawnAttempts`  
+How many times will the plugin attempt to find a valid spawn location for an entity.  
+Decrease this if you encounter heavy lag during spawn cycles, but note it may result in fewer overall spawns.
 
-MiniMinimumDistance<br/>
-_The minimum distance between minicopter spawns_
+* `MiniMinimumDistance`  
+The minimum distance between minicopter spawns
 
-MiniToMapRatio<br/>
-_MapSize / MiniToMapRatio = Max Minis_<br/>
-_In other words, the lower this value, the more frequently minicopters will spawn_
+* `MiniToMapRatio`  
+MapSize / MiniToMapRatio = Max Minis  
+In other words, the lower this value, the more frequently minicopters will spawn.
 
-SpawnLoopInterval<br/>
-_The number of seconds between each spawn cycle._<br/>
-_During each spawn cycle, the plugin will attempt to spawn enough minis and boats to meet the MaxBoats and MaxMinis values._
+* `SpawnLoopInterval`  
+The number of seconds between each spawn cycle.  
+During each spawn cycle, the plugin will attempt to spawn enough minis and boats to meet the MaxBoats and MaxMinis values.
 
 ## Console Commands
-lv.spawnminis<br/>
-_Manually trigger minicopter spawn cycle_
 
-lv.spawnboats<br/>
-_Manually trigger boat spawn cycle_
+* `lv.spawnminis`  
+Manually trigger minicopter spawn cycle
 
-lv.despawnminis<br/>
-_CAUTION! Despawns all minicopters on the map_
+* `lv.spawnboats`  
+Manually trigger boat spawn cycle
 
-lv.despawnboats<br/>
-_CAUTION! Despawns all boats on the map_
+* `lv.despawnminis`
+**CAUTION**: Despawns all minicopters on the map
+
+* `lv.despawnboats`
+**CAUTION**: Despawns all boats on the map
